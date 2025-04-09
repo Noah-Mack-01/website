@@ -95,7 +95,8 @@
               "src/styles/elements.scss",
               "src/styles/classes.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "karma.conf.js"
           }
         }
       }
