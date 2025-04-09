@@ -32,7 +32,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/elements.scss",
+              "src/styles/classes.scss"
             ],
             "scripts": []
           },
@@ -91,12 +92,16 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/elements.scss",
+              "src/styles/classes.scss"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "588d93d5-9a3e-453b-9cbe-afd0421abf39"
   }
 }

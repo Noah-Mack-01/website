@@ -1,0 +1,20 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+.active {
+  font-weight: 500;
+  color:#F45B69
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.description {
+  font-weight: 300;
+}
