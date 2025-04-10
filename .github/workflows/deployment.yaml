@@ -43,14 +43,6 @@ jobs:
   # Build job
   # Deployment job
 
-name: Deploy Angular App to GitHub Pages
-
-on:
-  push:
-    branches: [ main ]  # Change this to your default branch if different
-  workflow_dispatch:    # Allows manual trigger from the GitHub UI
-
-jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
