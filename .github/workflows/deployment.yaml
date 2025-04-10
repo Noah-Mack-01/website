@@ -37,7 +37,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci 
-    - run: npm run build -- --configuration production --base-href "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+    - run: npm run build -- --configuration production --base-href "/website/"
     - run: npm test
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
@@ -72,7 +72,7 @@ jobs:
       run: npm run deploy 
       env:
         GH_TOKEN: ${{ secrets.GH_PAT }}
-    - name: Print full directory structure of deployed app
+    - name: List Deployed Directory
       run: |
-        echo "Listing full directory structure of the runner's workspace:"
-        find $GITHUB_WORKSPACE
+        echo "Contents of the deployment directory:"
+        ls -R dist/website/
