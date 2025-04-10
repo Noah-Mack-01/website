@@ -37,13 +37,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci 
-    - run: npm run build -- --configuration production --base-href "/website/"
+    - run: npm run build -- --configuration production --base-href ""
     - run: npm test
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
         name: dist-files
-        path: dist/website/
+        path: dist/browser/
   # Build job
   # Deployment job
 
@@ -69,10 +69,10 @@ jobs:
     - name: Install angular and angular-cli-pages
       run: npm ci
     - name: Deploy to GitHub Pages
-      run: npm run deploy 
+      run: npm run deploy -- --dir=dist/browser 
       env:
         GH_TOKEN: ${{ secrets.GH_PAT }}
     - name: List Deployed Directory
       run: |
         echo "Contents of the deployment directory:"
-        ls -R dist/website/
+        ls -R dist/
