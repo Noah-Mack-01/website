@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: dist-files
-        path: dist/browser/
+        path: dist
   # Build job
   # Deployment job
 
@@ -60,7 +60,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: dist-files
-        path: dist/
+        path: dist
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
