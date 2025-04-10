@@ -67,6 +67,6 @@ jobs:
     - name: Install angular-cli-pages
       run: npm install -g angular-cli-ghpages
     - name: Deploy to GitHub Pages
-      run: ng deploy --dir=dist/website/browser --name="noah-mack-01" --email=noahnewmanmack@gmail.com
+      run: npm run deploy 
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
