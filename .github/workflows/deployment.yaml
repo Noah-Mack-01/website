@@ -67,7 +67,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install angular and angular-cli-pages
-      run: npm install -g @angular/cli && npm install -g angular-cli-ghpages
+      run: npm install ci
     - name: Deploy to GitHub Pages
       run: npm run deploy 
       env:
