@@ -37,7 +37,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci 
-    - run: npm run build -- --configuration production --base-href ""
+    - run: npm run build -- --configuration production --base-href=/website/
     - run: npm test
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
@@ -69,7 +69,7 @@ jobs:
     - name: Install angular and angular-cli-pages
       run: npm ci
     - name: Deploy to GitHub Pages
-      run: npm run deploy -- --dir=dist/browser 
+      run: npm run deploy -- --dir=dist/browser --base-href=/website/ 
       env:
         GH_TOKEN: ${{ secrets.GH_PAT }}
     - name: List Deployed Directory
