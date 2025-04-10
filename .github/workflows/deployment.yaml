@@ -61,6 +61,10 @@ jobs:
       with:
         name: dist-files
         path: dist
+    - name: List Deployed Directory
+      run: |
+        echo "Contents of the deployment directory:"
+        ls -R dist/
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -69,10 +73,6 @@ jobs:
     - name: Install angular and angular-cli-pages
       run: npm ci
     - name: Deploy to GitHub Pages
-      run: npm run deploy -- --dir=dist/website/browser --base-href=/website/ 
+      run: npx angular-cli-ghpages --dir=dist/website/browser
       env:
         GH_TOKEN: ${{ secrets.GH_PAT }}
-    - name: List Deployed Directory
-      run: |
-        echo "Contents of the deployment directory:"
-        ls -R dist/
