@@ -69,7 +69,7 @@ jobs:
     - name: Install angular and angular-cli-pages
       run: npm ci
     - name: Deploy to GitHub Pages
-      run: npm run deploy -- --dir=dist/browser --base-href=/website/ 
+      run: npm run deploy -- --dir=dist/website/browser --base-href=/website/ 
       env:
         GH_TOKEN: ${{ secrets.GH_PAT }}
     - name: List Deployed Directory

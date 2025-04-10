@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --browsers=ChromeHeadless --code-coverage --no-watch --no-progress",
-    "deploy": "ng deploy --name=\"noah-mack-01\" --email=noahnewmanmack@gmail.com --dir=dist/browser"
+    "deploy": "ng deploy --name=\"noah-mack-01\" --email=noahnewmanmack@gmail.com"
   },
   "private": true,
   "dependencies": {
