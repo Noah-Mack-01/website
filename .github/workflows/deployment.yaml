@@ -43,7 +43,8 @@ jobs:
   # Build job
   # Deployment job
 
-  build-and-deploy:
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
